@@ -4,9 +4,10 @@ function gerarDanfe(xml, callback) {
     var danfe = spawn('php', [
         'danfe.php'
     ], {
-        cwd: __dirname,
+        cwd: __dirname
     });
 
+    xml = xml.replace(/\n/g, '');
     danfe.stdin.setEncoding = 'utf-8';
     danfe.stdin.write(xml + '\n');
 
@@ -15,9 +16,9 @@ function gerarDanfe(xml, callback) {
         pdf.push(bytes);
     });
 
-    danfe.on('close', function(exitCode) {
-        if(exitCode !== 0) {
-            return callback(new Error('Erro gerando DANFE com nfephp'));
+    danfe.on('close', function(code) {
+        if(code !== 0) {
+            return callback(new Error('Erro gerando DANFE com nfephp: ' + code));
         }
 
         callback(null, Buffer.concat(pdf));
