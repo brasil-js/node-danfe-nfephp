@@ -1,0 +1,24 @@
+{
+  "name": "node-danfe-nfephp",
+  "version": "1.0.0",
+  "description": "Bindings php para gerar arquivos de DANFE em pdf utilizando a biblioteca nfephp a partir do nodejs",
+  "main": "index.js",
+  "scripts": {
+    "test": "exit 0;"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/brasil-js/node-danfe-nfephp.git"
+  },
+  "keywords": [
+    "danfe",
+    "pdf",
+    "nfephp"
+  ],
+  "author": "Renato Gama <renato@gammasoft.com.br>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/brasil-js/node-danfe-nfephp/issues"
+  },
+  "homepage": "https://github.com/brasil-js/node-danfe-nfephp"
+}
