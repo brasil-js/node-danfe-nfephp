@@ -1,8 +1,14 @@
 var spawn = require('child_process').spawn;
 
-function gerarDanfe(xml, callback) {
+function gerarDanfe(xml, opcoes, callback) {
+    if(typeof opcoes === 'function') {
+        callback = opcoes;
+        opcoes = {};
+    }
+
     var danfe = spawn('php', [
-        'danfe.php'
+        'danfe.php',
+        opcoes.creditos || ''
     ], {
         cwd: __dirname
     });
