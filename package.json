@@ -1,6 +1,6 @@
 {
   "name": "node-danfe-nfephp",
-  "version": "1.1.0",
+  "version": "1.1.2",
   "description": "Bindings php para gerar arquivos de DANFE em pdf utilizando a biblioteca nfephp a partir do nodejs",
   "main": "index.js",
   "scripts": {
